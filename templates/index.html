@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<div class="banner">
+	<div class="container">
+				{% block banner_content%}
+		<div class="banner-text">
+			<div class="banner-heading">Welcome {{user.first_name}}!<br>
+			</div>
+			<div class="banner-sub-heading text-center">
+				<em style="padding:5px;line-height: 15px;">“If we have no peace, it is because<br> we have forgotten that we belong to each other.”</em><br> ― Mother Teresa
+			</div>
+			<div class="row justify-content-around">
+			<div>
+			<a href="/home/view">
+			<button type="button" class="btn bg-warning btn-banner" style="margin-top: 10px">View <br>Tokens</button>
+			</a>
+			</div>
+			<div>
+				<a href="/home/events">
+			<button type="button" class="btn bg-warning btn-banner" style="margin-top: 10px">Generate <br>Tokens</button>
+			</a>
+			</div>
+			</div>
+		</div>
+	</div>
+			{% endblock banner_content%}
+</div>
+<!-- Services Section -->
+{% comment %} <section id="services">
+	<hr>
+	<div class="container-fluid">
+		<div class="text-intro">
+			<h2 style="font-size: 30px;font-weight: bolder;" class="linear-gradient-orange">AT YOUR SERVICE</h2>
+			<hr>
+			<section class="page-section" id="services">
+				<div class="row text-center">
+					<div class="col-md-4 service-card">
+						<span class="fa-stack fa-4x">
+							<i class="fa fa-handshake-o linear-gradient-blue"></i>
+						</span>
+						<h4 class="service-heading">Share<br> Resources</h4>
+						<h6 class="text-muted m-auto text-center col-md-8">Share books/Stationery with the friends who require it.</h6>
+					</div>
+					<div class="col-md-4">
+						<span class="fa-stack fa-4x">
+							<i class="fa fa-graduation-cap linear-gradient-blue"></i>
+						</span>
+						<h4 class="service-heading">Spread<br> Knowledge</h4>
+						<h6 class="text-muted m-auto text-center col-md-8">Upload e-books/notes for others to learn.</h6>
+					</div>
+					<div class="col-md-4">
+						<span class="fa-stack fa-4x">
+							<i class="fa fa-child linear-gradient-blue"></i>
+						</span>
+						<h4 class="service-heading">Social<br> Connect</h4>
+						<h6 class="text-muted m-auto text-center col-md-8">
+						Get Connected with you friends, Seniors and faculty.
+						</h6>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+</section> {% endcomment %}
+<!-- About Section-->
+<section id="about">
+<hr>
+<div class="container-fluid">
+	<div class="text-intro">
+		<h2 style="font-size: 30px;font-weight: bolder;" class="linear-gradient-orange">About Binder</h2>
+		<hr>
+		<br>
+	<div class="row">
+		<div class="text-center col-md-8 my-auto">
+			<h3>Binder is a completely free platform for Krishna Gardens and Krishna Recidency to generate Commodity sale tokens online <br>
+			</h3>
+		</div>
+		<div class="text-center col-md-4">
+			<img class=" rounded-circle dev-image" src="{% static 'images/logo.png' %}" width="400" height="400" >
+		</div>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+<!--- Developer Section-->
+<section id="team">
+<hr>
+<div class="container-fluid">
+<div class="text-intro">
+	<h2 style="font-size: 30px;font-weight: bolder;" class="linear-gradient-orange">Developed and managed by</h2>
+	<hr>
+	<br>
+	<div class="row">
+		<div class="text-center col-md-4">
+			<img class=" rounded-circle dev-image"  src="{% static 'images/anurag.jpeg' %}" width="400" height="400" >
+		</div>
+		<div class="team-member text-center col-md-8 my-auto">
+			<h2 class="love">Made with <i class="fa fa-heart text-danger"></i> by </h2>
+			<h1 class="linear-gradient-blue font-weight-bolder">Anurag Singh</h1>
+			{% comment %} <h4>Designer<br>Developer<br>Manager</h4> {% endcomment %}
+			<ul class="list-inline social-buttons ">
+				<li class="list-inline-item">
+					<a href="https://twitter.com/anuragsingh7700" target="blank">
+						<i class="fa fa-2x fa-twitter p-4" ></i>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="https://facebook.com/anuragsingh7700" target="blank">
+						<i class="fa fa-2x fa-facebook-f p-4"></i>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="https://in.linkedin.com/in/anuragsingh7700" target="blank">
+						<i class="fa fa-2x fa-linkedin p-4"></i>
+					</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="https://www.instagram.com/anurag_singh_7700/" target="blank">
+						<i class="fa fa-2x fa-instagram p-4"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<br>
+</div>
+</section>
+<!-- Contact section-->
+<section class="page-section" id="contact">
+<hr>
+<div class="container-fluid ">
+	<div class="text-intro">
+		<h2 style="font-size: 30px;font-weight: bolder;" class="linear-gradient-orange">LET'S GET IN TOUCH !</h2>
+		<hr><br>
+		<div class="row text-center">
+			<div class="col-md-4 service-card  m-auto">
+				<span class="fa-stack fa-4x">
+					<i class="fa fa-phone linear-gradient-blue"></i>
+				</span>
+				<h6 class="text-muted m-auto text-center col-md-8">MOB. NO.</h6>
+			</div>
+			<div class="col-md-4 service-card  m-auto">
+				<span class="fa-stack fa-4x">
+					<i class="fa fa-envelope linear-gradient-blue"></i>
+				</span>
+				<h6 class="text-muted m-auto text-center col-md-8">
+					<a class="d-block" href="mailto:anurag.r.singh1234@gmail.com">anurag.r.singh1234@gmail.com</a>
+				</h6>
+			</div>
+			<br>
+		</div>
+	</div>
+	<br>
+</section>
+<!-- <footer class="navbar bg-dark text-light">
+	<p class="text-muted">Binder footer text</p>
+</footer>
+ -->
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="bg-dark text-light banner">
+<br><br><br><br><br>
+  <div class="container-fluid col-lg-6 col-md-6 bg-outline-success rounded border border-success p-3">
+  <h4 class="text-center border border-success p-3 bg-success text-light">LOGIN</h4>
+  <form method="post" class="col-lg-10 col-md-10 m-auto" action="/home/login/"><br>
+    <p class="text-dark text-center bg-info">***Username is your bldg_wing_room no. (Eg. KG_B_201)***</p>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="Login" class="btn btn-outline-success p-3 text-light">
+  </form><br><br>
+  <h4 class="text-light">Don't Have an account - <a href="/home/signup/" class="btn btn-outline-primary text-light">Register</a></h4>
+  </div>
+</div>
+{% endblock %}

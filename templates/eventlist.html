@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="banner">
+<br><br><br><br>
+<div class="container-fluid col-lg-8 col-md-8 col-sm-12 text-center">
+<h2 class=" text-success">Events</h2>
+    {% if msg %}
+      <h6 class="text-danger">{{msg}}</h6>
+    {% endif %}
+     <table class="table table-stripped text-white">
+    <thead class="thead-light">
+      <tr>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Timing</th>
+        <th>Token Link</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for ev in Event %}
+        <tr>
+        <td>{{ev.name}}</td>
+        <td>{{ev.time.date}}</td>
+        <td>{{ev.time.time}}</td>
+        <td>
+            <a href="/home/token/{{ev.id}}" class="btn btn-outline-success text-white pl-4 pr-4">Get Token</a><br>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+
+{% endblock content %}

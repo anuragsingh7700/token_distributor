@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="text-light banner">
+<br><br><br><br>
+  <div class="container-fluid col-lg-6 col-md-6 bg-outline-success rounded border border-success p-3 text-center">
+  <h4 class="text-center border border-success p-3 bg-success text-light">{{message}}</h4>
+    <h5 class="p-3 text-light">Your Token Number</h6>
+    <div class="row justify-content-center">
+        <div class="col-md-2 col-lg-2 border"><h1 class="p-3 text-light">{{token.token_id}}</h1></div>
+    </div>
+    <h5 class="p-3 text-light">Your Timing starts at</h6>
+    <div class="row justify-content-center">
+        <div class="col-md-4 col-lg-4 border"><h1 class="p-3 text-light">{{token.timing}}</h1></div>
+    </div>
+  </div>
+<br>
+<div>
+{% endblock %}

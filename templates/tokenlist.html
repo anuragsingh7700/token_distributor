@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="banner">
+<br><br><br><br>
+<div class="container-fluid col-lg-8 col-md-8 col-sm-12 text-center">
+<h2 class=" text-success">Tokens</h2>
+     <table class="table table-stripped text-white">
+    <thead class="thead-light">
+      <tr>
+        <th>Event Date</th>
+        <th>Event Name</th>
+        <th>Token Number</th>
+        <th>Token Timing</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for token in tokens %}
+        {% for ev in event %}
+            {% if ev.id == token.event_id.id%}
+            <tr>
+            <td>{{ev.time}}</td>
+            <td>{{ev.name}}</td>
+            <td>{{token.token_id}}</td>
+            <td>{{token.timing}}</td>
+            </tr>
+        {% endif %}
+        {% endfor %}
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+    {% if messages %}
+          <script>
+            var msg = "Token Generation Failed\nPlease Try again!"
+            alert(msg);
+          </script>
+    {% endif %}
+</div>
+{% endblock content %}
